@@ -38,7 +38,7 @@ SELECT * FROM PACIENTE p
 WHERE paciente.ESPECIE = 'Cão'
 AND paciente.PESO < 7
 
-SELECT a.*, (SELECT p.nome, p.peso FROM PACIENTE p WHERE p.id_paciente = a.id_paciente) FROM AGENDAMENTO a 
+SELECT a.*, (SELECT p.peso FROM PACIENTE p WHERE p.id_paciente = a.id_paciente) FROM AGENDAMENTO a 
 WHERE a.DATA_HORA  BETWEEN '2024-04-01' AND '2024-06-30'
 
 SELECT * FROM PACIENTE p 
